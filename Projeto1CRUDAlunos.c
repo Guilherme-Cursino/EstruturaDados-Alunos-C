@@ -2,45 +2,50 @@
 
 typedef struct Aluno
 {
-    char nome[50];
     int id;
+    char nome[50];
     float nota;
+    Aluno *proximo;
+    Aluno *anterior;
 } Aluno;
+
+Aluno *cabeca = NULL;
+Aluno *cauda = NULL;
+
 
 // typedef struct Aluno Aluno;
 
-void cadastraAluno()
-{
+void cadastraAluno(){
 }
 
-void removeAluno()
-{
+void removeAluno(){
+
+    //caso seja informado o ID de um aluno que não exista na lista a operação não deverá seguir e deverá ser mostrado “Usuário não encontrado”
 }
 
-void mostraAluno()
-{
+void mostraAluno(){
+
+    //caso seja informado o ID de um aluno que não exista na lista a operação não deverá seguir e deverá ser mostrado “Usuário não encontrado”
 }
 
-void editaAluno()
-{
+void editaAluno(){
+
+    //caso seja informado o ID de um aluno que não exista na lista a operação não deverá seguir e deverá ser mostrado “Usuário não encontrado”
 }
 
-void mostraTodosAluno()
-{
+void mostraTodosAluno(){
 }
 
-void mostraEstatisticas()
-{
+void mostraEstatisticas(){
 }
 
-int main()
-{
+int main() {
     int opcao;
 
     do
     {
         printf("MENU\n");
-        printf("O que voce deseja fazer: ");
+        printf("Selecione a operacao que deseja fazer: ");
         scanf("%d", &opcao);
 
         switch (opcao)
@@ -67,6 +72,7 @@ int main()
 
         case 6:
             mostraEstatisticas();
+            break;
 
         default:
             break;
