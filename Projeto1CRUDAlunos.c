@@ -21,23 +21,27 @@ void cadastraAluno(){
     printf("Digite o ID do aluno: ");
     scanf("%d", &novo->id);
     // Verificar se o id ja ta cadastrado
-    Aluno *atual = inicio;
+    Aluno *atual = cabeca;
     while (atual != NULL) {
         if (atual->id == novo->id) { 
             printf("Erro: Já existe um aluno com esse ID.\n");
             return;
         }
         atual = atual->proximo;
+        //aqui ele so vai checar toda a lista manualmente pra ver se o id já ta cadastrado
     }
+     
     printf("Digite o nome do aluno: ");
     scanf(" %[^\n]", novo->nome);
     printf("Digite a nota do aluno: ");
     scanf("%f", &novo->nota);
-    
+    //pra jogar o novo aluno cadastrado pro início da lista, é preciso que o anterior do novo seja NULL e o proximo seja a cabeca
     novo->anterior = NULL;
-    novo->proximo = inicio;
-    if (inicio != NULL) inicio->anterior = novo;
-    inicio = novo;
+    novo->proximo = cabeca;
+    //se a cabeca for diferente de NULL (ou seja, se tiver algum aluno já cadastrado) o anterior da cabeca se torna "novo"
+    if (cabeca != NULL) cabeca->anterior = novo;
+    //e o "novo" se torna cabeca
+    cabeca = novo;
 
     printf("Aluno cadastrado com sucesso!\n");
 }
