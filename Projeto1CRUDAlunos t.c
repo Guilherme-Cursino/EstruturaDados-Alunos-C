@@ -16,48 +16,46 @@ Aluno *cauda = NULL;
 void cadastraAluno() {
     Aluno *novo = (Aluno *)malloc(sizeof(Aluno));
 
-    
-    
     printf("Digite o ID do aluno: ");
     scanf("%d", &novo->id);
 
     Aluno *atual = cabeca;
     while (atual != NULL) {
-        if (atual->id == novo->id) { 
-            printf("Erro: Já existe um aluno com esse ID.\n");
-            free(novo);  
+        if (atual->id == novo->id) {
+            printf("Erro: Ja existe um aluno com esse ID.\n");
+            free(novo);
             return;
         }
         atual = atual->proximo;
     }
 
-    
     printf("Digite o nome do aluno: \n");
     scanf(" %[^\n]", novo->nome);
 
-    
+    float novaNota; 
     printf("Digite a nota do aluno: \n");
-    scanf("%f", &novo->nota);
+    scanf("%f", &novaNota);
 
+    while (novaNota < 0 || novaNota > 10){
+        printf("Nota invalida. Digite novamente: ");
+        scanf("%f", &novaNota);
+    }
     
-    novo->anterior = NULL;
-    novo->proximo = cabeca;
+    novo->nota = novaNota;
 
-    
-    if (cabeca != NULL) {
-        cabeca->anterior = novo;
+    novo->proximo = NULL;
+    novo->anterior = cauda;
+
+    if (cauda != NULL) {
+        cauda->proximo = novo;
+    } else {
+        cabeca = novo;
     }
 
-    cabeca = novo;
-
-    if (cauda == NULL) {
-        cauda = novo;
-    }
+    cauda = novo;
 
     printf("Aluno cadastrado com sucesso!\n");
 }
-
-
 
 void buscaAluno(){
     Aluno *aux = cabeca;
@@ -67,7 +65,7 @@ void buscaAluno(){
     scanf("%i", &idBuscado);
 
     if(aux==NULL){
-        printf("Não há alunos cadastrados.\n");
+        printf("Nao ha alunos cadastrados.\n");
     }
     else{
         while(aux != NULL){
@@ -89,9 +87,40 @@ void buscaAluno(){
 }
 
 void removeAluno(){
-    //Implementar
+        if (cabeca == NULL) {
+            printf("Nao ha alunos cadastrados.\n");
+            return;
+        }
+    
+        int idBuscado;
+        printf("Digite o ID do aluno a ser removido: ");
+        scanf("%d", &idBuscado);
+    
+        Aluno *atual = cabeca;
+    
+        while (atual != NULL) {
+            if (atual->id == idBuscado) {
+                if (atual->anterior != NULL) {
+                    atual->anterior->proximo = atual->proximo;
+                } else {
+                    cabeca = atual->proximo;
+                }
+    
+                if (atual->proximo != NULL) {
+                    atual->proximo->anterior = atual->anterior;
+                } else {
+                    cauda = atual->anterior;
+                }
+    
+                free(atual);
+                printf("Aluno removido com sucesso.\n");
+                return;
+            }
+            atual = atual->proximo;
+        }
+    
+        printf("Aluno com ID %d nao encontrado.\n", idBuscado);
 }
-
 
 void editaAluno(){
 
@@ -122,7 +151,7 @@ void mostraTodosAlunos(){
 
      Aluno *atual = cabeca;
     if (atual == NULL) {
-        printf("Não há alunos cadastrados.\n");
+        printf("Nao ha alunos cadastrados.\n");
         return;
     }
 
@@ -131,7 +160,6 @@ void mostraTodosAlunos(){
         atual = atual->proximo;
     }
 }
-
 
 void mostraEstatisticas(){
 
@@ -172,6 +200,7 @@ int main() {
 
     do
     {
+        printf("---------------------\n");
         printf("MENU\n");
         printf("1. Cadastrar aluno\n");
         printf("2. Remover aluno\n");
@@ -180,32 +209,38 @@ int main() {
         printf("5. Mostrar todos os alunos\n");
         printf("6. Mostrar estatisticas\n");
         printf("0. Sair\n");
-        printf("Selecione a operacao que deseja fazer: ");
+        printf("Selecione a operacao que deseja realizar: ");
         scanf("%d", &opcao);
 
         switch (opcao)
         {
         case 1: 
+            system("cls");
             cadastraAluno();
             break;
 
         case 2:
+            system("cls");
             removeAluno();
             break;
 
         case 3:
+            system("cls");
             buscaAluno();
             break;
         
         case 4:
+            system("cls");
             editaAluno();
             break;
 
         case 5:
+            system("cls");    
             mostraTodosAlunos();
             break;
 
         case 6:
+            system("cls");
             mostraEstatisticas();
             break;
 
