@@ -70,7 +70,7 @@ void buscaAluno(){
     else{
         while(aux != NULL){
             if(idBuscado == aux->id){
-                printf("Usuário encontrado:\n");
+                printf("Usuario encontrado:\n");
                 printf("ID: %d\n", aux->id);
                 printf("Nome: %s\n", aux->nome);
                 printf("Nota: %.2f\n", aux->nota);
