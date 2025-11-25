@@ -1,8 +1,6 @@
 # Como forma de estudo de Estrutura de Dados, este projeto é a resolução do seguinte desafio: 
 
-Utilizando a linguagem C, criar uma lista duplamente encadeada que permita as operações abaixo.
-
-## Operações Implementadas
+Utilizando a linguagem C, criar uma lista duplamente encadeada que permita as seguintes operações:
 
 * Cadastro de um novo aluno com as informações de nome, nota e identificador (ID).
 * Exibição de aluno existente a partir de determinado ID. 
