@@ -1,0 +1,18 @@
+# Compiled binaries
+alunos
+alunos.exe
+*.out
+*.o
+
+# Output directory
+output/
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
