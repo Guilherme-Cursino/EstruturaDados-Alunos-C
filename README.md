@@ -1,9 +1,7 @@
-# Como forma de estudo de Estrutura de Dados, este projeto é a resolução do seguinte desafio: 
-
-Utilizando a linguagem C, criar uma lista duplamente encadeada que permita as seguintes operações:
+Acredito que a excelência técnica vem de uma base forte, por isso também dedico tempo ao estudo de estruturas de dados. Utilizando a linguagem C, me desafiei a criar uma lista duplamente encadeada que permitisse as seguintes operações:
 
 * Cadastro de um novo aluno com as informações de nome, nota e identificador (ID).
-* Exibição de aluno existente a partir de determinado ID. 
+* Busca e exibição de aluno existente a partir de determinado ID. 
 * Edição de aluno após sua busca. 
 * Exibição de todos os alunos da lista. 
 * Exibição de estatísticas para a lista de alunos (como maior nota, menor nota e média das notas dos alunos). 
