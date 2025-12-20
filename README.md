@@ -2,11 +2,11 @@
 
 Um sistema de gerenciamento de alunos implementado em C utilizando estrutura de dados de **lista duplamente encadeada**. Este projeto demonstra operações fundamentais de estrutura de dados, incluindo inserção, busca, edição, remoção e análise estatística.
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto foi desenvolvido para fortalecer conhecimentos em estruturas de dados, especificamente listas duplamente encadeadas. O sistema permite gerenciar informações de alunos (ID, nome e nota) através de uma interface de linha de comando interativa.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 O sistema oferece as seguintes operações:
 
@@ -17,7 +17,7 @@ O sistema oferece as seguintes operações:
 - **Estatísticas**: Calcula e mostra a maior nota, menor nota e média da turma
 - **Remoção de Aluno**: Remove um aluno do sistema pelo ID
 
-## 🔧 Estrutura de Dados
+## Estrutura de Dados
 
 O projeto utiliza uma **lista duplamente encadeada** com as seguintes características:
 
@@ -33,13 +33,13 @@ typedef struct Aluno {
 
 A lista mantém ponteiros para o início (cabeça) e fim (cauda), permitindo navegação bidirecional eficiente.
 
-## 📦 Requisitos
+## Requisitos
 
 - **Compilador C**: GCC ou qualquer compilador compatível com C padrão
 - **Sistema Operacional**: Linux, macOS ou Windows
 - **Bibliotecas**: stdio.h, stdlib.h, string.h (bibliotecas padrão do C)
 
-## 🚀 Compilação e Execução
+## Compilação e Execução
 
 ### Linux / macOS
 
@@ -61,7 +61,7 @@ gcc ListaEncadeadaAlunos.c -o alunos.exe
 alunos.exe
 ```
 
-## 💻 Como Usar
+## Como Usar
 
 Ao executar o programa, você verá um menu interativo:
 
@@ -93,7 +93,7 @@ MENU
    - Selecione a opção 6
    - O sistema exibirá maior nota, menor nota e média
 
-## 🛡️ Tratamento de Erros
+## Tratamento de Erros
 
 O sistema implementa validações para garantir a integridade dos dados:
 
@@ -102,7 +102,7 @@ O sistema implementa validações para garantir a integridade dos dados:
 - **Aluno Não Encontrado**: Informa quando um ID buscado não existe
 - **Lista Vazia**: Notifica quando não há alunos cadastrados para operações que requerem dados
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 EstruturaDados-Alunos-C/
@@ -112,7 +112,7 @@ EstruturaDados-Alunos-C/
 └── output/                    # Diretório para arquivos compilados
 ```
 
-## 🎯 Conceitos Aplicados
+## Conceitos Aplicados
 
 - Lista duplamente encadeada
 - Alocação dinâmica de memória
@@ -122,22 +122,14 @@ EstruturaDados-Alunos-C/
 - Interface de linha de comando (CLI)
 - Validação de dados
 
-## 📝 Notas Técnicas
+## Notas Técnicas
 
 - O programa utiliza `system("cls")` para limpar a tela, que funciona em Windows. Em sistemas Unix/Linux, substitua por `system("clear")`
 - A memória é alocada dinamicamente usando `malloc()` e liberada com `free()`
 - O sistema mantém os dados apenas em memória durante a execução (não há persistência em arquivo)
 
-## 👤 Autor
+## Autores
 
-**Guilherme Cursino**
-
-Este projeto faz parte dos meus estudos em estruturas de dados e algoritmos.
-
-## 📄 Licença
-
-Este projeto é de código aberto e está disponível para fins educacionais.
-
----
-
-⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
+- **Guilherme Cursino** @Guilherme-Cursino
+- **João Ramos** @JoaoPas-Ramos
+- **Lara Gabriela** @gabixx
