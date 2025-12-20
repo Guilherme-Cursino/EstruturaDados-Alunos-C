@@ -130,6 +130,6 @@ EstruturaDados-Alunos-C/
 
 ## Autores
 
-- **Guilherme Cursino** @Guilherme-Cursino
-- **João Ramos** @JoaoPas-Ramos
-- **Lara Gabriela** @gabixx
+- **Guilherme Cursino** [@Guilherme-Cursino](https://github.com/Guilherme-Cursino)
+- **João Ramos** [@JoaoPas-Ramos](https://github.com/JoaoPas-Ramos)
+- **Lara Gabriela** [@gabixx](https://github.com/gabixx)
